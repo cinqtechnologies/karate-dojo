@@ -1,0 +1,15 @@
+server:
+  port: 8089
+
+spring:
+  datasource:
+    continue-on-error: true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: wtropen
+    password: sita
+    url: jdbc:mysql://127.0.0.1:3307/karate?serverTimezone=America/Sao_Paulo
+    type: com.mysql.cj.jdbc.MysqlDataSource
+  data:
+    jpa:
+      repositories:
+        enabled: true

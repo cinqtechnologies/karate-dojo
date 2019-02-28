@@ -6,8 +6,10 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>karate-demo</name>
+
   <modules>
     <module>web</module>
     <module>ci</module>
   </modules>
+
 </project>
