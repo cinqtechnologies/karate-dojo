@@ -33,4 +33,4 @@ Esperamos que ao término da dinâmica o grupo esteja mais familiarizado com con
 * **Use o POSTMAN para entender o request**
 * Não tenha vergonha de fazer perguntas sobre conceitos, sintaxe, objetivo (Não existem perguntas idiotas ;) ...Principalmente em Dojôs)
 ## Como Funcionam os números romanos
-![alt Desafio do Coding Dojo](./doc/challenge.jpeg)
+![alt Desafio do Coding Dojo](./integration-test/doc/challenge.jpeg)
