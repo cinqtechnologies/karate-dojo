@@ -1,0 +1,39 @@
+version: "3.7"
+
+services:
+  romancalc-rs:
+    image: cinqtech/romancalc-rs:latest
+    hostname: romancalc-rs
+    ports: ["8888:8080"]
+    networks:
+      - cinqtech-dojo
+
+  integration-test:
+    image: cinqtech/integration-test:latest
+    hostname: integration-test
+    ports: []
+    environment:
+      - KARATE_ENVIRONMENT=docker
+    volumes:
+      - karate_nginx:/external/nginx/home
+      - ../:/tmp/app/
+      - maven_repo:/root/.m2/repository/
+    networks:
+      - cinqtech-dojo
+
+  nginx:
+    image: nginx
+    hostname: nginx
+    ports: ["80:80"]
+    volumes:
+      - karate_nginx:/usr/share/nginx/html
+    networks:
+      - cinqtech-dojo
+
+networks:
+  cinqtech-dojo:
+    external: true
+
+volumes:
+  maven_repo:
+  karate_nginx:

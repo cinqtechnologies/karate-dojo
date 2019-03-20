@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "operation": {
+    "symbol": "#? isOperator('/', _)",
+    "first": "X",
+    "second": "XX"
+  },
+  "errors": "#notpresent"
+}

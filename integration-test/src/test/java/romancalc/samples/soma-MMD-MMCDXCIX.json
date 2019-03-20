@@ -1,0 +1,13 @@
+{
+  "success": false,
+  "errors": [
+    {
+      "message": "Roman numbers overflow"
+    }
+  ],
+  "operation": {
+    "symbol": "#? isOperator('+',_)",
+    "first": "MMD",
+    "second": "MMCDXCIX"
+  }
+}

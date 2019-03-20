@@ -1,0 +1,8 @@
+{
+  "success": false,
+  "errors": [
+    {
+      "message": "Invalid Math symbol"
+    }
+  ]
+}

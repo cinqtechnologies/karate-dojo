@@ -1,0 +1,10 @@
+{
+  "success": true,
+  "operation": {
+    "symbol": "#? isOperator('+', _)",
+    "first": "MMD",
+    "second": "MCDXCIX"
+  },
+  "result": "MMMCMXCIX",
+  "errors": "#notpresent"
+}
