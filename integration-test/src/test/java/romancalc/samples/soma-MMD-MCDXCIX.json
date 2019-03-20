@@ -1,7 +1,7 @@
 {
   "success": true,
   "operation": {
-    "symbol": "#? isOperator('+', _)",
+    "symbol": "#? isOperator('mais', _)",
     "first": "MMD",
     "second": "MCDXCIX"
   },

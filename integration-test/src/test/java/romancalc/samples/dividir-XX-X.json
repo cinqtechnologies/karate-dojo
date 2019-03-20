@@ -2,7 +2,7 @@
   "success": true,
   "operation": {
     "symbol": "#? isOperator('/', _)",
-    "first": "XX",
+    "first": "20",
     "second": "X"
   },
   "result": "II",

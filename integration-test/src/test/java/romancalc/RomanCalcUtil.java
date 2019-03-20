@@ -6,7 +6,7 @@ import java.util.List;
 public class RomanCalcUtil {
 
 
-  private static final List<String> romans = Arrays.asList("i", "I", "v", "V", "x", "X", "l", "L", "c", "C", "d", "D", "m", "M");
+  private static final List<String> romans = Arrays.asList("i", "I", "v", "V", "x", "X", "l", "L", "Q", "c", "C", "d", "D", "m", "M", "N");
 
   public static final String removeNonRomans(String value) {
     final StringBuilder result = new StringBuilder();

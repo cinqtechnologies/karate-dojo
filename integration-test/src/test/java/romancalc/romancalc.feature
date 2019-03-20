@@ -1,9 +1,9 @@
 Feature: Roman Calculator
 
   Background:
-    * url baseAPIUrl
-    * def operation = read('math-operator.js')
-    * def isOperator = read('is-operator.js')
+    * url baseAPI
+#    * def operation = read('math-operator.js')
+#    * def isOperator = read('is-operator.js')
 
 
   Scenario Outline: Operação de Soma [<first> <operation> <second> = <resultFileName>]
@@ -30,22 +30,22 @@ Feature: Roman Calculator
     * def op = operation('<operation>')
 
     Given path 'calc', '<first>', op, '<second>'
-    When method GET
+    When method POST
     Then status <status>
     And match response == read('samples/<resultFileName>')
 
 
     Examples:
       | first  | second   | operation | status | resultFileName              |
-      | X      | IX       | -         | 200    | subtracao-X-IX.json         |
+      | X      | IX       | -         | 404    | subtracao-X-IX.json         |
       | X      | X        | subtract  | 200    | subtracao-X-X.json          |
-      | SIX    | X        | -         | 422    | subtracao-SIX-X.json        |
+      | SIX    | X        | minus     | 422    | subtracao-SIX-X.json        |
 
 
   Scenario Outline: Operação de Multiplicação [<first> <operation> <second> = <resultFileName>]
 
     * call read('service-is-available.feature')
-    * def second = Java.type("romancalc.RomanCalcUtil").removeNonRomans('<second>')
+#    * def second = Java.type("romancalc.RomanCalcUtil").removeNonRomans('<second>')
 
     Given path 'calc', '<first>', operation('<operation>'), second
     When method GET
@@ -58,7 +58,7 @@ Feature: Roman Calculator
       | MCCCXXXIII | III        | *         | 200    | multiplicar-MCCCXXXIII-III.json |
       | III        | MCCCXXXIII | multiply  | 200    | multiplicar-III-MCCCXXXIII.json |
       | IV         | MCCCXXXIII | *         | 400    | multiplicar-IV-MCCCXXXIII.json  |
-      | I          | MMCXCINQX  | *         | 200    | multiplicar-I-MMCXCINQX.json    |
+      | I          | MMCXCINQX  | times     | 200    | multiplicar-I-MMCXCINQX.json    |
 
 
   Scenario Outline: Operação de Divisão [<first> <operation> <second> = <resultFileName>]
@@ -68,7 +68,7 @@ Feature: Roman Calculator
     Given path 'calc', '<first>', operation('<operation>'), '<second>'
     When method GET
     Then status <status>
-    And match response == read('samples/<resultFileName>')
+    And match response == read('samples/resultFileName')
 
 
     Examples:

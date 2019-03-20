@@ -7,7 +7,7 @@
   ],
   "operation": {
     "symbol": "#? isOperator('*',_)",
-    "first": "IV",
+    "first": "4",
     "second": "MCCCXXXIII"
   }
 }

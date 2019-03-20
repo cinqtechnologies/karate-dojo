@@ -5,7 +5,7 @@ Feature: Roman Calculator
 
   Scenario: Servidor deve estar disponível
 
-    Given path 'ping'
+#    Given path 'ping'
     When method GET
     Then status 200
     And match response == 'PONG'
